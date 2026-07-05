@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spoonful</title>
+        <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <!--THE HEADER BAR-->
+            <header>
+               
+                <div class="header-left">
+                <img src="spoonful-logo.png" alt="Spoonful Icon" class="header-logo-icon">
+            </div>
+
+            <div class="header-center">
+                <img src="spoonful-title.png" alt="Spoonful" class="header-logo-title">
+            </div>
+
+            <div class="header-right">
+                <div class="theme-toggle-box">
+                <span class="theme-toggle">🌙</span>
+                </div>
+            </div>
+
+        </header>
+
+        <!--MY STATUS MAIN CONTAINER-->
+        <main class="landing-card">
+            <!--Wrap inputs in a form to safely group data collection-->
+            <form id="status-form">
+
+            <!--notebook fields under this :)-->
+
+            <!--HEADER SECTION-->
+            <div class="status-header">
+                <h2>My Status</h2>
+                <div class="name-field">
+                    <label for="name">Name:</label>
+                    <input type="text" id="user-name" placeholder="Enter your name">
+                </div>
+            </div>
+
+           <!--SPOON CAPACITY SECTION-->
+           <div class="spoon-counter-section">
+            <h3> How are you feeling Today?</h3>
+            <span class="section-sub">Spoons</span>
+
+            <!--Custom illustrated spoons-->
+            <div class="spoons-row" class="spoons-visual-row">
+            <img src="spoon-full.png" class="spoon-preview" alt="Spoon">
+            <img src="spoon-full.png" class="spoon-preview" alt="Spoon">
+            <img src="spoon-full.png" class="spoon-preview" alt="Spoon">
+            <img src="spoon-full.png" class="spoon-preview" alt="Spoon">
+            <img src="spoon-full.png" class="spoon-preview" alt="Spoon">
+            <img src="spoon-empty.png" class="spoon-preview" alt="Spoon">
+            <img src="spoon-empty.png" class="spoon-preview" alt="Spoon">
+            <img src="spoon-empty.png" class="spoon-preview" alt="Spoon">
+            <img src="spoon-empty.png" class="spoon-preview" alt="Spoon">
+            <img src="spoon-empty.png" class="spoon-preview" alt="Spoon">
+            </div>
+
+            <!--Numerical counter-->
+            <div class="counter-display">
+                <span id="current-spoons">5</span>/<span id="total-spoons">10</span>
+            </div>
+           </div>
+
+            <!--PAIN LEVEL SECTION-->
+            <div class="pain-level-selection">
+                <h3>Pain</h3>
+                <div class="toggle-group" id="pain group">
+                    <button type="button" class="toggle-btn" data-value="low">Low</button>
+                    <button type="button" class="toggle-btn" data-value="moderate">Moderate</button>
+                    <button type="button" class="toggle-btn" data-value="high">High</button>
+                </div>
+            </div>
+
+            <!--BRAIN WEATHER-->
+            <div class="brain-weather-section">
+                <h3>Brain weather</h3>
+                <div class="toggle-group" id="weather-group">
+                    <button type="button" class="toggle-btn" data-value="clear">☀️ Clear</button>
+                    <button type="button" class="toggle-btn" data-value="cloudy">☁️ Cloudy</button>
+                    <button type="button" class="toggle-btn" data-value="foggy">🌫️ Foggy</button>
+                    <button type="button" class="toggle-btn" data-value="stormy">⛈️ Stormy</button>
+                </div>
+            </div>
+
+            <!--SOCIAL BATTERY SECTION-->
+            <div class="social-battery-section">
+                <h3>Social Battery</h3>
+                <div class="toggle-group" id="battery-group">
+                    <button type="button" class="toggle-btn" data-value="full"> Full</button>
+                    <button type="button" class="toggle-btn" data-value="okay"> Okay</button>
+                    <button type="button" class="toggle-btn" data-value="low"> Low</button>
+                    <button type="button" class="toggle-btn" data-value="offline"> Offline</button>
+                </div>
+
+                <!--TODAY I'M OKAY WITH SECTION-->
+                <div class="comfort-section">
+                    <h3>Today I'm Okay with...</h3>
+                    <div class="input-group">
+                        <textarea id="comfort-text" placeholder="Example: Company without talking, texting only..."></textarea>
+                    </div>
+                </div>
+
+           <!--OPTIONAL NOTE SECTION-->
+           <div class="notes-section">
+            <h3> Anything you'd like people to know? <span class="optional-tag">(Optional)</span></h3>
+            <div class="input-group">
+                <textarea id="custom-note" placeholder="Any extra context, boundaries or updates..."></textarea>
+            </div>
+          </div>
+            <!--GENERATE/SHARE BUTTON-->
+
+        <div class="action-section">
+
+            <button type="button" id="share-btn" class="main-action-btn">
+
+                🔗 Share with trusted people
+
+            </button>
+        </div>
+            </div>
+           </div>
+
+           </form>
+
+        </main>
+
+         <!--Footer-->
+            <footer class="app-branding-footer">
+                <hr class="footer-divider">
+                <div class="footer-meta">
+                    <span class="author-tag">By: Moony (M Holguin)</span>
+                    <span class="handle-tag">@Moony.notes</span>
+                    <span class="version-tag">Version 1.0 Spoonful - @JULY2026</span>
+            </footer>
+
+         <script src="script.js"></script>
+         
+    </body>
+</html>
