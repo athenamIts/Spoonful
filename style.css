@@ -1,0 +1,508 @@
+/*The Canvas*/
+body {
+    background-color: #29170a; /*uPDATED: Warm, dark brown*/
+    color: #E3D9C9; /*UPDATED: warmer cream text*/
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    min-height: 100vh;
+    padding-top: 130px;
+    box-sizing:border-box;
+}
+
+/*TOP HEADER bar*/
+header {
+    width: 100%;
+    position: fixed; /* Keeps it pinned nicely at the top */
+    top: 0;
+    left: 0;
+    background-color: #2e231f; /* Matches card color exactly */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem; /* Clean balanced padding */
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /*soft shadow*/
+    z-index: 1000;
+    height: 70px; /*Locked height*/
+    border-bottom:  1.5px solid #9bb1bc;
+}
+
+/*Force text left and right*/
+.header-left,
+.header-right {
+    flex: 1;
+    display: flex;
+    align-items: center; /*Vertically centers the icon inside its track*/
+}
+
+/*Align the right side items to the far end*/
+.header-right {
+    justify-content:flex-end; /*correct far right edge*/
+    align-items: center;
+}
+
+/*Layout container for theme switch*/
+.theme-toggle-box {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.25rem; /*Nice redable size for the moon*/
+    width: 32px;
+    height: 32px;
+}
+
+.header-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2; /*Gives the middle block stretching priority (a tad)*/
+}
+
+.header-logo-icon {
+    height: 32px;/*Giving it a tiny bit more visual weight*/
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.header-logo-title {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/*Landing card container*/
+.landing-card {
+    background-color: #2e231f; /*light brown contrast box*/
+    border-radius: 12px; /*rounded corners*/
+    padding: 32px;
+    max-width: 500px; /*clean mobile layout constraint*/
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2); /*shadow dept effect*/
+}
+
+h1{
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #f4eae1;
+}
+
+.explanation-box {
+    background-color: #1e1109;/*Dark warm chocolate*/
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.explanation {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #d1c4b9; /*slightly muted cream, easy reading*/
+    margin: 0;
+    text-align: center;
+}
+
+
+/*Action button, interactive element*/
+.continue-btn {
+    background-color: #B8684F; /*cream sruface*/
+    color: #E3D9C9; /*dark text*/
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+/*Subtitle text under primary continue button*/
+.action-subtitle {
+    display: block;
+    font-size:12px;
+    color: #7D755B; /*Cozy muted text*/
+    margin-top: 8px;
+    font-style: italic;
+    letter-spacing: 0.03em;
+}
+
+/*Subtle divider*/
+.card-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(125, 117, 91, 0.3), transparent);
+  margin: 28px 0;
+}
+
+/*Lower page box for gentle reminder*/
+.tip-box {
+    background-color: #1e1109;
+    border: 1px dashed rgba(125, 117, 91, 0.4); /*dashed for cozy feel*/
+    border-radius: 8px;
+    padding: 14px;
+    text-align: left;
+    margin-top: 12px;
+}
+
+/*header insider the reminder box*/
+.tip-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #E5CDA1; /*WARM OCHRE ACCENT*/
+    display: block;
+    margin-bottom:  4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/*paragraph text inside the reminder box*/
+.tip-box p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #d1c4b9; /*Better reading*/
+}
+
+/*=============
+STYLE OF MY STATUS PAGE
+========================*/
+
+/*Spoons visual row styling*/
+.spoons-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 5px; /*Breathing space between spoons*/
+    margin: 16px 0;
+}
+
+.spoon-preview {
+    width: 40px; /*clean n readable for mobile screens*/
+    height: 40px; /*Keeps them squared*/
+    object-fit: contain;
+}
+
+/*Numericla counter under spoons*/
+.counter-display {
+    font-size: 16px;
+    font-weight: 600;
+    color: #E3D9C9;
+    margin-bottom: 24px;
+}
+
+/*Form section headers & titles*/
+.status-header h2 {
+    font-size: 24px;
+    color: #E3D9C9;
+    margin-bottom: 16px;
+}
+
+.spoon-counter-section h3,
+.pain-level-selection h3,
+.brain-weather-section h3,
+.social-weather-section h3,
+.social-battery-section h3,
+.comfort-section h3,
+.notes-section h3 
+
+{
+    font-size: 18px;
+    color: #E3D9C9;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.section-sub {
+    font-size: 14px;
+    color: #d9a28f;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.optional-tag {
+    font-size: 12px;
+    color: #d9a28f;
+}
+
+/*Input fields and textareas*/
+.name-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.name-field label {
+    font-size: 16px;
+    color: #E3D9C9;
+}
+
+input[type="texts"],
+textarea {
+    background-color: #1e1109; /*deep, cozy dark interior fil*/
+    border: 1px solid #7D755B; /*muted earthy border line*/
+    border-radius: 6px;
+    color: #E3D9C9;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="text"]
+{
+width: 60%;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    resize: none; /*Keeps container clean without user breaking layour*/
+}
+
+/*Custom placeholder text colors to fit the theme*/
+input::placeholder,
+textarea::placeholder {
+    color: #7d755b;
+    opacity:0.8;
+}
+
+/*Adding structure and breathing room to sections*/
+.pain-level-selection,
+.brain-weather-section,
+.social-battery-section,
+.comfort-section,
+.notes-section
+{
+    margin-top: 28px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/*Aligning buttons*/
+.toggle-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /*Space between individual buttons*/
+    margin-top: 10px;
+}
+
+/*Base style for Toggle buttons*/
+.toggle-btn {
+    background-color: #29170a; /*deep interior container fill*/
+    color: #E3D9C9; /*warm cream text*/
+    border: 1px solid #7D755B; /*muted earthy border line*/
+    border-radius: 20px; /*curved buttons :D*/
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/*subtle hover effect*/
+.toggle-btn:hover {
+    background-color: #B8684F;
+    border-color: #B8684F;
+    color: #E3D9C9;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(184, 104, 79, 0.2);
+}
+
+.action-section {
+    margin-top: 36px;
+    margin-bottom: 8px;
+}
+
+.main-action-btn {
+    background-color:#B8684F;
+    color: #E3D9C9;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease;
+}
+
+.main-action-btn:hover {
+    background-color: #a2563e; /*slightly deeper tone on hover*/
+}
+
+/* ================================================
+TRUSTED PERSON VIEW STYLES
+=================================================*/
+
+/*Clean styling for the bulleted list*/
+.status-list {
+    list-style-type: none; /*Removes default dots*/
+    padding: 0;
+    margin: 24px 0;
+    text-align: center;
+    display: inline-block; /*keeps it centered*/
+}
+
+.status-list li {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #E3D9C9;
+}
+
+.status-list strong {
+    color: #d9a28f; /*soft pastel orange-pink ish accent for labels*/
+}
+
+/*Good for box & personal use*/
+.good-for-box,
+.personal-note-section {
+    margin-top: 28px;
+    text-align: left;
+}
+
+.text-display-box {
+    background-color: #1e1109; /*Clean minimalistic left border*/
+    padding: 12px;
+    border-radius: 4px;
+    color: #E3D9C9;
+    MARGIN-TOP: 6PX;
+    font-size: 12px;
+}
+
+/*Personal note aesthetic bubble :p*/
+.note-bubble {
+    background-color: #1e1109;
+    border: 1px dashed #7D755B; /*dashed look 4 handwritten note feel*/
+    padding: 14px;
+    border-radius: 12px;
+    font-style: italic;
+    color: #E3D9C9;
+    margin-top: 6px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/*How can you help section (Instead/ Try comaprison)*/
+.help-section {
+    margin-top: 32px;
+    text-align: left;
+}
+
+.help-comparison {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.instead-box, .try-box {
+    padding: 14px;
+    border-radius: 8px;
+    background-color: #1e1109;
+}
+
+/*Give the boxes clear, gentle guidance indicators*/
+.instead-box{
+    border-left: 4px solid #7a3a3a; /*Deep red for boundary warnings*/
+}
+
+.try-box {
+    border-left: 4px solid #976c39; /*Warm ochre for helpful alternatives*/
+}
+
+.instead-box .label, .try-box .label 
+{
+    font-weight: bold;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.instead-box .label { color:#d9a28f; }
+.try-box .label {color: #E5CDA1 }
+
+.instead-box p, .try-box p 
+{
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #d1c4b9;
+}
+
+
+/*Footer reflection Quote*/
+.reflection-text {
+    margin-top: 36px;
+    font-size: 13px;
+    line-height: 1.6;
+    color:#7D755B; /*Darker muted cream*/
+    font-style: italic;
+    text-align: center;
+    border-top: 1px solid rgba(125, 117, 91, 0.2);
+    padding-top: 16px;
+}
+
+/*============================
+APP BRANDING FOOTER
+======================*/
+.app-branding-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2e231f; 
+  padding: 1rem 2rem; /*breathing room*/
+  box-sizing: border-box;
+  border-top: 1.5px solid #9bb1bc;
+  z-index: 1000;
+}
+
+.footer-divider {
+   display: none;
+}
+
+.footer-meta {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #B8684F;
+    letter-spacing: 0.05em;
+}
+
+.author-tag {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.handle-tag {
+    font-style: italic;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.version-tag {
+    opacity: 0.7;
+}
+
+main {
+    margin-bottom:5rem !important;
+}
