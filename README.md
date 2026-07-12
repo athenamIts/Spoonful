@@ -1,149 +1,95 @@
-## Spoonful
-*A gentle way to share how you're doing today.*
+## Spoonful 
+A gentle way to communicate today's capacity. :)
 
-Spoonful is a small web application inspired by the **Spoon Theory**,
-a concept widely used withing chronic illness and disability community to describe how limited daily energy can be.
+Spoonful is a small web application inspired by Spoon Theory, a concept many people with chronic illnesses, disabilities, and fluctuating energy levels use to describe how much energy they have avaliable in the day.
+The idea behind Spoonful is simple: instead of having to explain over and over why today feels different, users can share a snapshot of how they're doing with the people they trust. Rather than fousing on medical data the goal is to make communication feel a little easier.
 
-Living with an invisible disability often means repeating the same conversations over and over:
+This is the first version of a project I've wanted to build for months, and my first complete web application built from scratch.
 
-*"I'm not ignoring you."*
+## Why I built this
+I'm 17 years old, and I live with the chronic pain and fatigue.
 
-*"I'm just exhausted."*
+For a long time, I kept coming back to the Spoon Theory and wondering if there was a gentler way to communicate what a difficult day actually looks like.
+Explaining that you're not ignoring people, that you're just simply running low on energy, can become exhausting on its own.
 
-*"I'd love to, I just don't have the energy."*
+I'd been thinking about building something around that idea for about six months, but never quite found the right moment (or enough time) to start. Hack Club's Macondo challenge finally gave me the push to stop planning and begin building.
 
-Spoonful aims to make those conversations a little easier.
+Coincidentially, I also worked on this first version during Disability Pride Month, which made the experience feel even more meaningful.
 
-Instead of having to explain your capacityevery day, users can fill out a simple status page, generate a shareable view, and let the people they trust better understand how they're feeling and how they can best offer support.
+One realization I had while designing Spoonful was that I'm not designing around illness. I'm designing around communication. That idea ended up guiding almost every design decision throughout the project.
 
-This is the prototype of a project that Ihope to continue developing in the future.
- 
- # Why I built this
+## Features
+### Landing Page
+The landing page introductions Spoon Theory in a simple, approachable way for people who may have not heard of it before. Rather than assuming prior knowledge it briefly explains the concept before inviting the user to continue.
 
- I'm 17 years old, and I live with chronic pain and fatigue myself.
+<img width="1909" height="1002" alt="Captura de pantalla 2026-07-04 205605" src="https://github.com/user-attachments/assets/5f359c75-97ad-4cf4-852c-fe6a83edc65a" />
 
- This project comes from a very personal place. For months I'd been thinking about creating something around Spoon Theory, but never quite knew where to begin (or I was to busy to do so). Hack Club's Macondo challenge finally gave me the push to turn that idea into something real.
+### My Status
+This page allows users to communicate their current capacity by selecting:
+- Spoon count
+- Pain level
+- Brain weather
+- Social Battery
+- Activities they're comfortable with today
+- An optional personal note
+  The goal isn't to track health data. I'ts to make communicating today's capacity easier without having to write the same explanation every time.
+  <img width="945" height="998" alt="Captura de pantalla 2026-07-04 210511" src="https://github.com/user-attachments/assets/eeeaea19-8638-4826-b030-eaa29bd8438b" />
+<img width="950" height="1001" alt="Captura de pantalla 2026-07-04 210048" src="https://github.com/user-attachments/assets/79b7df41-71ed-4602-9615-4bb4ff439c15" />
 
- Coincidentially, I also built this during **Disability Pride Month**, which makes this version feel even more meaningful to me.
+  ### Trusted Circle View
+  This is the page shared with trusted friends or fmaily members.
 
----------------------------------
+  Instead of only showing someone's status, it alos includes gentle suggestions about what might be helpful today, encouraging support through understanding rather than assumptions.
 
- ## Features
+  <img width="945" height="996" alt="Captura de pantalla 2026-07-04 210634" src="https://github.com/user-attachments/assets/606d8e27-f5c6-4551-ac71-b67804910ed7" />
 
- # Landing page
+  ### Design Philosophy
+  One design principle guided every decision throughout this project:
+  Comfort over clinical
+  I didn't want Spoonful to feel like a medical dashboard.
 
- A simple introduction to spoon Theory and the purpose of Spoonful, including a gentle explanation for people discovering the concept for the first time.
+  On difficult days, opening an app shouldn't feel cold or intimidating, so I intentionally leaned toward warm colors, soft contrast, and a calm visual style instead.
 
-# Screenshot
+  The interface draws inspiration from cozy minimalism, using chocolate browns, muted creams, earthy ochres and soft clay accents to create a comfortable reading experience. (At the moment this prototype only includes a dark mode).
+I also illustrated the spoon icons myself because I wanted the project to have its own visual dientity rather than relying on generic assets.
 
- ![alt text:"Landing page"](image-1.png)
-
---------------------------------------------
-
- # My status
-
- An interactive page where users can communicate their current capacity by selecting:
-
- - Spoon count
- - Pain level
- -  weather (mental clarity/focus/capacity)
- - Social battery
- - Activities they're comfortable with today
- - An optional personal note
-
- The goal is to express today's realities without needing to type the same explanation repeteadly.
-
- # Screenshot
-
- ![alt text:"My status"](image-2.png)
-![alt text:"My status filled"](image-3.png)
-
- ----------------------------------------
- 
- # Trusted Circle View
-
- A clean, easy to read page designed for friends and family.
-
- Rather than only displaying someone's status it also offers gentle suggestions for supportive communication, encouraging understanding instead of asumptions.
-
- # Screenshot
-
-![alt text:"Someone's status"](image-4.png)
-
------------------------------------
-
-## Design Philosophy ##
-
-One design principle guided every decision throughout this project:
-
-*Comfort over clinical*
-I didn't want Spoonful to feel like a medicla dashboard.
-
-I wanted it to feel calm, warm and safe.
-
-The interface draws inspiration from cozy minimalism, using warm chocolate browns, muted creams, earthy ochres and soft clay accents to reduce visual harshness while remaining accesible and comfortable to read. 
-(althought this is technically just the dark mode version)
-
-Even the spoon illustrations were drawn specifically for this project to create a softer, more personal identity.
-
----------------------------------------------
-
-# Built With
-
+## Built With
 - HTML
 - CSS
-- Vanilla JavaScript
+- Vanilla Javascript
+  I intentionally built tghis project without frameworkds so I could strenghten my understanding of the fundamentals while creating my first complete web app.
 
-No frameworks, no libraries, just the fundamentals.
+  ### Development
+  Total development time before writing README version 1 and 2: 13.6 hours
 
--------------------------------------
+  Approximate breakdown:
+  - Planning & wireframing: 1.6 hours
+  - Custom illustrations & assets: 0.7 hours
+  - Frontend development & UI polish: 11.3 hours
+    Most of the coding happened during long periods of creative focus. Although balancing development with chronic pain, fatigue and brain fog wasn't always easy, I'm proud of how much this first prototype grew over jsut a few days.
 
-## DEVELOPMENT
+    ## AI Usage
+AI was used throughout the project as a elarning and brainstorming tool.
+I mainly used it to:
+- Better understand HTML, CSS and JavaScript concepts while learning.
+- Debug code and understanding why certain solutions worked.
+- Brainstorm implementation ideas and simplify technical decisions.
+- Improve documentation structured wording.
+The project's concept, UX flow, interface design, illustrations, visual identity and overall direction were all my own.
 
-Total development before writing the READ.ME was around **13.6 hours**
+Because I live with chronic pain and fatigue, brain fog sometimes makes it difficult to organiz emy thoughts or work through problems on my own. Using AI as a thinking partner helped me externalize ideas and continue making progress, but every major design and implementation desicion remained mine.
 
-Approximate breakdown:
-- Planning and wireframing: **1.6 hours**
-- Custom illustrations & assets: **0.7 hours**
-- Fronted development & UI polish: **11.3 hours**
-
-Most of those coding hours happened in long creative flow state. While I definitely paid for it physically afterwards (chronic pain doesnt negotiate, nor brain fog does), I'm incredibly proud of how much this first prototype became in such a short amount of time.
-
-# AI Usage Declaration
-
-AI was used as a learning and brainstorming tool throught the development of Spoonful.
-
-Specifically, I used AI to:
-
-- Clarify HTML, CSS, and Java Scripts while learning.
-- Debug parts of my code and understanding WHY solutions worked.
-- Brainstorming implementations ideas and simplify technical decisions
-- Referencing structure for documentation.
-
-All project decisions, the original concept, user experience, interface design, illustrations, wireframes, visual identity and overall direction were created by me.
-
-Spoonful is a project born from my own experiences and motivation to create a gentler way for people with invisible disabilities and chronic illnesses to communicate their daily capacity. AI supported the learning process, but the idea, design vision and final implementation remaind my own.
-
-**Personal note:** Because I live with chronic pain and fatigue, brain fog can sometimes make me get stuck in the same thought loops or lose track of ideas while working. Brainstorming with AI helped me externalize those thoughts, organize them, and continue making progress. For me, it functioned as a thinking partner rather than a replacement for my own creativity or decision-making.
-
------------------------------
-
-# What's Next
-
+## What's Next
 This is only Version 1.
-
-Some ideas I'd love to explore in future iterations include:
-
+Some ideas I'd like to explore in future iterations include:
 - Persistent shareable links
 - Trusted contacts
-- Better accesibility options
-- More personalization
-- Improved responsive layouts
-- Additional communciaiton tools for invisible disabilities
+- More accesibility features
+- Personalizxation options
+- Additionañ communication tools
+- Better responsive layouts
+Long-term, I'd love for Spoonful to become part of a larger ecosystem supporting people with invisible disabilities and chronic illnesses.
 
-Long-term,I'd love for Spoonful to become part of a alrger project supporting people with invisible disabilities and chronic illnesses.
+## Final Thoughts
+Spoonful started as a hackathon project, but I don't think it'll end there. If it helps even one person say 2This is where I'm at Today2, without feeling like they have to justify themselves all over again, then building it will have been worth it.
 
---------------------------
-
-# A small note
-If Spoonful helps even one person explain, "This is where Im' at Today," without feeling like thet have to jsutify themselves all over again, then building it was worth it.
